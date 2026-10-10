@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O Sopro da Nova Era · Ao Remanso do Coração</title>
+<meta name="description" content="Ao Remanso do Coração, livro 1 da série psicografada O Sopro da Nova Era, de Maria de Lourdes Irineu de Souza, pelo espírito Amâncio. E-book disponível na Amazon.">
+<!-- Prévia do link no WhatsApp e redes: troque SEU-USUARIO pelo seu usuário do GitHub -->
+<meta property="og:type" content="book">
+<meta property="og:title" content="Ao Remanso do Coração · O Sopro da Nova Era">
+<meta property="og:description" content="Livro 1 da série psicografada, pelo espírito Amâncio. E-book disponível na Amazon.">
+<meta property="og:image" content="https://SEU-USUARIO.github.io/o-sopro-da-nova-era/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://SEU-USUARIO.github.io/o-sopro-da-nova-era/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="capa.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@400;500&display=swap">
+<style>
+/* Layout: coluna única de leitura, como uma carta, entre a faixa do amanhecer e a estante da coleção */
+:root{
+  --ceu:#e2e5ed;        /* lilás acinzentado da capa */
+  --pessego:#f7d5c0;    /* pêssego da capa */
+  --coral:#c2755a;      /* raios do sol, para rótulos */
+  --mar:#0b4f9c;        /* azul do título da capa */
+  --tinta:#1b3b68;      /* texto */
+  --suave:#5b6f8e;      /* texto secundário */
+  --papel:rgba(255,255,255,.55);
+  --display:"Lora", Georgia, "Times New Roman", serif;
+  --texto:"Lora", Georgia, "Times New Roman", serif;
+  --util:"Poppins", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--texto);color:var(--tinta);
+  background:linear-gradient(160deg,var(--ceu) 0%,var(--pessego) 30%,#f9dccb 60%,var(--ceu) 100%);
+  background-color:var(--pessego);line-height:1.7;font-size:1.125rem}
+.wrap{max-width:44rem;margin:0 auto;padding-inline:20px}
+.serie{font-family:var(--util);font-weight:500;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--mar);display:flex;align-items:center;justify-content:center;gap:1rem;padding-block:1.6rem 1.2rem;text-align:center}
+.serie::before,.serie::after{content:"";width:2.5rem;height:1px;background:var(--coral)}
+.faixa{height:clamp(200px,38vw,380px);background:url(foto.jpg) center 45%/cover;
+  -webkit-mask:linear-gradient(transparent,#000 14%,#000 82%,transparent);mask:linear-gradient(transparent,#000 14%,#000 82%,transparent)}
+.hero{text-align:center;padding-block:1rem 3rem}
+.rotulo{font-family:var(--util);font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);margin:0 0 .6rem}
+h1{font-family:var(--display);font-weight:600;color:var(--mar);font-size:clamp(2.3rem,7vw,3.6rem);line-height:1.1;margin:0 0 1rem;text-wrap:balance;letter-spacing:.01em}
+.autoria{margin:0;color:var(--suave);font-size:1.05rem}
+.autoria em{color:var(--mar);font-weight:500}
+.cta{display:inline-flex;align-items:center;gap:.6rem;margin-top:2rem;font-family:var(--util);font-weight:500;font-size:1rem;
+  background:var(--mar);color:#fff;text-decoration:none;padding:.95rem 1.7rem;border-radius:999px;
+  box-shadow:0 10px 24px rgba(11,79,156,.25);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(11,79,156,.3)}
+.cta:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.nota-cta{display:block;margin-top:.7rem;font-family:var(--util);font-size:.82rem;color:var(--suave)}
+section{padding-block:3rem}
+h2{font-family:var(--display);font-weight:500;font-style:italic;color:var(--mar);font-size:clamp(1.7rem,4.5vw,2.2rem);margin:0 0 1.5rem;text-wrap:balance}
+.carta{background:var(--papel);border-radius:4px;padding:clamp(1.5rem,5vw,3rem);box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
+.carta p{margin:0 0 1.1em;text-wrap:pretty}
+.carta .destaque{font-style:italic;font-size:1.35rem;color:var(--mar);text-align:center;margin-block:1.6em .3em}
+.carta .centro{text-align:center}
+.assina{text-align:right;font-style:italic;font-weight:600;color:var(--mar)}
+.sep{width:3rem;height:1px;background:var(--coral);margin:2.2rem auto;border:0}
+b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
+.citacao{font-style:italic}
+.livro{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:2rem;align-items:start}
+.livro img{width:100%;height:auto;border-radius:3px;box-shadow:0 20px 40px rgba(27,59,104,.25),0 3px 10px rgba(27,59,104,.12)}
+.livro p{margin:0 0 1em}
+.ficha{font-family:var(--util);font-size:.85rem;color:var(--suave);display:grid;gap:.25rem;margin-top:1rem}
+.colecao{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.9rem}
+.vol{text-align:center;font-family:var(--util);font-size:.82rem;color:var(--suave)}
+.vol .capa-mini{aspect-ratio:2/3;border-radius:3px;margin-bottom:.6rem;display:grid;place-items:center;
+  border:1px dashed rgba(91,111,142,.45);color:var(--suave);font-family:var(--display);font-style:italic;font-size:1.5rem}
+.vol.ativo .capa-mini{border:0;background:url(capa.jpg) center/cover;box-shadow:0 10px 22px rgba(27,59,104,.22)}
+.vol strong{display:block;color:var(--tinta);font-weight:500}
+footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--suave);padding-block:3rem 3.5rem}
+@media (max-width:620px){
+  .livro{grid-template-columns:minmax(0,1fr)}
+  .livro img{max-width:12rem;margin:0 auto;display:block}
+  .colecao{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){.cta{transition:none}}
+</style>
+</head>
+<body>
+
+
+<header class="serie">O Sopro da Nova Era</header>
+<div class="faixa" role="img" aria-label="Amanhecer sobre o mar, com raios de sol entre as nuvens"></div>
+
+<main>
+<div class="wrap hero">
+  <p class="rotulo">Livro 1 da série</p>
+  <h1>Ao Remanso do Coração</h1>
+  <p class="autoria">Maria de Lourdes Irineu de Souza · pelo espírito <em>Amâncio</em></p>
+  <a class="cta" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Comprar o e-book na Amazon</a>
+  <span class="nota-cta">Leia no Kindle, no celular, no tablet ou no computador</span>
+</div>
+
+<section class="wrap" id="carta">
+  <div class="carta">
+    <h2>Queridos Amigos,</h2>
+    <p>Há palavras que devem ser silenciadas. Outras, que devem ser proclamadas, projetadas no espaço, nas vidas.</p>
+    <p>Palavras de luz, de esperança e amor devem percorrer o caminho do coração, libertando-nos dos entraves para a conquista interior da paz e da alegria.</p>
+    <p>A renovação espiritual é premente. Os círculos convergem para a regeneração da Terra. Os sentimentos apurados devem sobressair no emaranhado do sentir e das emoções que fluem ininterruptamente.</p>
+    <p class="destaque">Haverá paz. Amor. Fraternidade.</p>
+    <p class="centro">Porque é o sentido da evolução. E evoluir sempre é o destino de todos.</p>
+    <p>Renascemos com esperança. E a aguilhoamos, nas incertezas e na imaturidade do espírito. Aprendemos, contudo, e crescemos moral e intelectualmente, compreendendo que todas as vicissitudes são degraus de evolução.</p>
+    <p>O movimento evolutivo da humanidade é o caminho de luz a que nos convidou Jesus. Encontremos em cada passo a confiança, a certeza de que ao vibrarmos amor e exercitamos a caridade e a fraternidade aceleramos o processo de redenção do mundo e ingressamos numa era de equilíbrio e harmonia nas vidas, nos corações.</p>
+    <p class="assina">Amâncio</p>
+    <hr class="sep">
+    <p>Com essas palavras o espírito Amâncio apresenta <b class="t">O SOPRO DA NOVA ERA</b>, uma série psicografada de cinco livros, em que nos leva a refletir sobre as perspectivas individuais e coletivas do novo tempo, pautado nas transformações morais e evolutivas, no amor, na fé, na compreensão e na caridade, valores que orientam o caminho da fraternidade com Jesus.</p>
+    <p><b class="t">AO REMANSO DO CORAÇÃO</b>, o primeiro livro da série, vem falar de amor e esperança. Convidar à renovação. Recordar o Mestre, suas palavras, ensinamentos, o seu impacto na transformação interior de cada ser, nos apontar novos caminhos, novo tempo.</p>
+    <p>Finalmente já está disponível em formato e-book.</p>
+    <p>Os outros quatro volumes serão publicados a seguir.</p>
+    <p>Serei grata se puderem ajudar a divulgar. Todo recurso obtido será destinado a Núcleos e atividades de estudo, evangelização, assistência e divulgação da doutrina espírita.</p>
+    <p>E agradeço, especialmente, o incentivo e o apoio que tenho recebido para seguir nesta jornada.</p>
+    <p class="citacao">“No caminho do amor a esperança é estrela-guia”, como diz Amâncio, e “uma obra de amor deve fluir com a certeza de que é o amor que flui por onde passar.”</p>
+    <p>Que Jesus nos ilumine e possamos continuar a tarefa de amor e luz.</p>
+    <p style="margin-bottom:.2em"><em>João Pessoa,</em></p>
+    <p class="assina">Maria de Lourdes Irineu de Souza</p>
+  </div>
+</section>
+
+<section class="wrap" id="livro">
+  <h2>Sobre o livro</h2>
+  <div class="livro">
+    <img src="capa.jpg" alt="Capa do livro Ao Remanso do Coração: amanhecer sobre o mar" width="794" height="1149">
+    <div>
+      <p><b>Remete o leitor ao tempo de Jesus</b>, a passagens, significativas umas, singelas outras, que discorrem sobre a essência de seus ensinamentos e o impacto na transformação interior daqueles que vivenciaram esses sublimes momentos, envolvendo-os e conduzindo-os em direção à luz radiante do amor.</p>
+      <p><i>Ao Remanso do Coração</i> vem falar de amor e esperança, convidar à renovação e a seguir com fé e confiança no coração, nesse caminho de luz para um novo tempo, uma Nova Era de amor e fraternidade.</p>
+      <div class="ficha">
+        <span>Psicografia · Literatura espírita</span>
+        <span>E-book Kindle · ISBN 978-65-01-73831-4</span>
+      </div>
+      <a class="cta" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Ver na Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="colecao">
+  <h2>A coleção</h2>
+  <ol class="colecao">
+    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><strong>Ao Remanso do Coração</strong>Volume 1 · disponível</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Volume 2</strong>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Volume 3</strong>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Volume 4</strong>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">5</div><strong>Volume 5</strong>em breve</li>
+  </ol>
+</section>
+</main>
+
+<footer>© 2025 Maria de Lourdes Irineu de Souza · João Pessoa, PB</footer>
+
+</body>
+</html>
