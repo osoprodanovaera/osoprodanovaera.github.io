@@ -15,7 +15,31 @@
 <meta property="og:url" content="https://osoprodanovaera.com.br/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="capa.jpg">
+<link rel="canonical" href="https://osoprodanovaera.com.br/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#f7d5c0">
+<meta name="author" content="Maria de Lourdes Irineu de Souza">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Ao Remanso do Coração",
+  "author": {"@type": "Person", "name": "Maria de Lourdes Irineu de Souza"},
+  "inLanguage": "pt-BR",
+  "genre": "Literatura espírita",
+  "image": "https://osoprodanovaera.com.br/capa.jpg",
+  "url": "https://osoprodanovaera.com.br/",
+  "isPartOf": {"@type": "BookSeries", "name": "O Sopro da Nova Era"},
+  "position": 1,
+  "workExample": {
+    "@type": "Book",
+    "bookFormat": "https://schema.org/EBook",
+    "isbn": "9786501738314",
+    "potentialAction": {"@type": "ReadAction", "target": "https://www.amazon.com.br/dp/B0FY4L74NP"}
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +104,18 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 @media (max-width:620px){
   .livro{grid-template-columns:minmax(0,1fr)}
   .livro img{max-width:12rem;margin:0 auto;display:block}
-  .colecao{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .colecao{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+  .vol.ativo{grid-column:1/-1;display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;align-items:center;text-align:left;font-size:.9rem}
+  .vol.ativo .capa-mini{margin-bottom:0}
+  .vol{font-size:.75rem}
+  .vol .capa-mini{font-size:1.2rem}
+  body{font-size:1.0625rem}
+  .carta{padding:1.4rem 1.2rem}
+}
+@media (max-width:360px){
+  .serie{letter-spacing:.2em;font-size:.7rem;gap:.6rem}
+  .serie::before,.serie::after{width:1.5rem}
+  .cta{padding:.9rem 1.3rem;font-size:.95rem}
 }
 @media (prefers-reduced-motion:reduce){.cta{transition:none}}
 </style>
@@ -128,7 +163,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 <section class="wrap" id="livro">
   <h2>Sobre o livro</h2>
   <div class="livro">
-    <img src="capa.jpg" alt="Capa do livro Ao Remanso do Coração: amanhecer sobre o mar" width="794" height="1149">
+    <img src="capa.jpg" loading="lazy" decoding="async" alt="Capa do livro Ao Remanso do Coração: amanhecer sobre o mar" width="794" height="1149">
     <div>
       <p><b>Remete o leitor ao tempo de Jesus</b>, a passagens, significativas umas, singelas outras, que discorrem sobre a essência de seus ensinamentos e o impacto na transformação interior daqueles que vivenciaram esses sublimes momentos, envolvendo-os e conduzindo-os em direção à luz radiante do amor.</p>
       <p><i>Ao Remanso do Coração</i> vem falar de amor e esperança, convidar à renovação e a seguir com fé e confiança no coração, nesse caminho de luz para um novo tempo, uma Nova Era de amor e fraternidade.</p>
@@ -144,7 +179,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 <section class="wrap" id="colecao">
   <h2>A coleção</h2>
   <ol class="colecao">
-    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><strong>Ao Remanso do Coração</strong>Volume 1 · disponível</li>
+    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1 · disponível</div></li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Volume 2</strong>em breve</li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Volume 3</strong>em breve</li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Volume 4</strong>em breve</li>
@@ -153,7 +188,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 </section>
 </main>
 
-<footer>© 2025 Maria de Lourdes Irineu de Souza · João Pessoa, PB</footer>
+<footer>© 2025 Maria de Lourdes Irineu de Souza · <span style="white-space:nowrap">João Pessoa, PB</span></footer>
 
 </body>
 </html>
