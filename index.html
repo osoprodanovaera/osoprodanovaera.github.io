@@ -106,6 +106,7 @@ section{padding-block:3rem}
 h2{font-family:var(--display);font-weight:500;font-style:italic;color:var(--mar);font-size:clamp(1.7rem,4.5vw,2.2rem);margin:0 0 1.5rem;text-wrap:balance}
 .carta{background:var(--papel);border-radius:4px;padding:clamp(1.5rem,5vw,3rem);box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
 .carta p{margin:0 0 1.1em;text-wrap:pretty}
+@media (min-width:600px){.carta > p:not(.destaque):not(.centro):not(.assina){text-align:justify;-webkit-hyphens:auto;hyphens:auto}}
 .carta .destaque{font-style:italic;font-size:1.35rem;color:var(--mar);text-align:center;margin-block:1.6em .3em}
 .carta .centro{text-align:center}
 .assina{text-align:right;font-style:italic;font-weight:600;color:var(--mar)}
@@ -230,11 +231,11 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 <section class="wrap" id="colecao">
   <h2>A coleção</h2>
   <ol class="colecao">
-    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1 · impresso e e-book</div></li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Volume 2</strong>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Volume 3</strong>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Volume 4</strong>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">5</div><strong>Volume 5</strong>em breve</li>
+    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1<br>impresso e <span style="white-space:nowrap">e-book</span></div></li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Pela Eternidade em Flor</strong>Volume 2<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Somente Amor</strong>Volume 3<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Fraternidade e Esperança</strong>Volume 4<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true">5</div><strong>Vidas em Movimento</strong>Volume 5<br>em breve</li>
   </ol>
 </section>
 </main>
