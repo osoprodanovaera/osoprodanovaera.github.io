@@ -140,6 +140,8 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 footer a{display:inline-block;margin-bottom:.5rem}
 footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--suave);padding-block:3rem 3.5rem}
 @media (max-width:620px){
+  .autoria .ponto{display:none}
+  .autoria .espirito{display:block}
   .livro{grid-template-columns:minmax(0,1fr)}
   .livro img{max-width:12rem;margin:0 auto;display:block}
   .colecao{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
@@ -169,7 +171,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 <div class="wrap hero">
   <p class="rotulo">Livro 1 da série</p>
   <h1>Ao Remanso do Coração</h1>
-  <p class="autoria">Maria de Lourdes Irineu de Souza · pelo espírito <em>Amâncio</em></p>
+  <p class="autoria">Maria de Lourdes Irineu de Souza<span class="ponto"> · </span><span class="espirito">pelo espírito <em>Amâncio</em></span></p>
 </div>
 
 <section class="wrap" id="carta">
