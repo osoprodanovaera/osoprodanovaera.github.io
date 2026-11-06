@@ -145,8 +145,8 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   .livro{grid-template-columns:minmax(0,1fr)}
   .livro img{max-width:12rem;margin:0 auto;display:block}
   .colecao{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
-  .vol.ativo{grid-column:1/-1;display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;align-items:center;text-align:left;font-size:.9rem}
-  .vol.ativo .capa-mini{margin-bottom:0}
+  .vol.ativo{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.9rem;margin-bottom:.6rem}
+  .vol.ativo .capa-mini{width:7.5rem;margin-bottom:.6rem}
   .vol{font-size:.75rem}
   .vol .capa-mini{font-size:1.2rem}
   body{font-size:1.0625rem}
