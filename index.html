@@ -93,6 +93,9 @@ h1{font-family:var(--display);font-weight:600;color:var(--mar);font-size:clamp(2
 .comprar .rotulo-g{font-family:var(--util);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
 .comprar .botoes{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
 .comprar .cta{margin-top:0;min-width:12rem;justify-content:center}
+.cta.clube{background:#a6388c;box-shadow:0 10px 24px rgba(166,56,140,.28)}
+.cta.estante{background:#0b6e72;box-shadow:0 10px 24px rgba(11,110,114,.28)}
+.cta.clube:hover,.cta.estante:hover{filter:brightness(.93)}
 .cta.sec{background:transparent;color:var(--mar);box-shadow:inset 0 0 0 1.5px var(--mar)}
 .cta.sec:hover{background:rgba(11,79,156,.07);box-shadow:inset 0 0 0 1.5px var(--mar)}
 .livro .comprar{justify-items:start}
@@ -106,6 +109,7 @@ h2{font-family:var(--display);font-weight:500;font-style:italic;color:var(--mar)
 .carta .destaque{font-style:italic;font-size:1.35rem;color:var(--mar);text-align:center;margin-block:1.6em .3em}
 .carta .centro{text-align:center}
 .assina{text-align:right;font-style:italic;font-weight:600;color:var(--mar)}
+.assina.meio{padding-right:22%}
 .sep{width:3rem;height:1px;background:var(--coral);margin:2.2rem auto;border:0}
 b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .citacao{font-style:italic}
@@ -153,8 +157,8 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   <div class="comprar">
     <div class="grupo"><span class="rotulo-g">Livro impresso</span>
       <div class="botoes">
-        <a class="cta" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
-        <a class="cta" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
+        <a class="cta clube" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
+        <a class="cta estante" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
       </div></div>
     <div class="grupo"><span class="rotulo-g">E-book</span>
       <div class="botoes"><a class="cta sec" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Amazon (Kindle)</a></div></div>
@@ -171,7 +175,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     <p class="centro">Porque é o sentido da evolução. E evoluir sempre é o destino de todos.</p>
     <p>Renascemos com esperança. E a aguilhoamos, nas incertezas e na imaturidade do espírito. Aprendemos, contudo, e crescemos moral e intelectualmente, compreendendo que todas as vicissitudes são degraus de evolução.</p>
     <p>O movimento evolutivo da humanidade é o caminho de luz a que nos convidou Jesus. Encontremos em cada passo a confiança, a certeza de que ao vibrarmos amor e exercitamos a caridade e a fraternidade aceleramos o processo de redenção do mundo e ingressamos numa era de equilíbrio e harmonia nas vidas, nos corações.</p>
-    <p class="assina">Amâncio</p>
+    <p class="assina meio">Amâncio</p>
     <hr class="sep">
     <p>Com essas palavras o espírito Amâncio apresenta <b class="t">O SOPRO DA NOVA ERA</b>, uma série psicografada de cinco livros, em que nos leva a refletir sobre as perspectivas individuais e coletivas do novo tempo, pautado nas transformações morais e evolutivas, no amor, na fé, na compreensão e na caridade, valores que orientam o caminho da fraternidade com Jesus.</p>
     <p><b class="t">AO REMANSO DO CORAÇÃO</b>, o primeiro livro da série, vem falar de amor e esperança. Convidar à renovação. Recordar o Mestre, suas palavras, ensinamentos, o seu impacto na transformação interior de cada ser, nos apontar novos caminhos, novo tempo.</p>
@@ -201,8 +205,8 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
       <div class="comprar">
     <div class="grupo"><span class="rotulo-g">Livro impresso</span>
       <div class="botoes">
-        <a class="cta" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
-        <a class="cta" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
+        <a class="cta clube" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
+        <a class="cta estante" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
       </div></div>
     <div class="grupo"><span class="rotulo-g">E-book</span>
       <div class="botoes"><a class="cta sec" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Amazon (Kindle)</a></div></div>
