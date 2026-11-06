@@ -30,7 +30,7 @@
   "genre": "Literatura espírita",
   "image": "https://osoprodanovaera.com.br/capa.jpg",
   "url": "https://osoprodanovaera.com.br/",
-  "isPartOf": {"@type": "BookSeries", "name": "O Sopro da Nova Era"},
+  "isPartOf": {"@type": "BookSeries", "name": "O Sopro da Nova Era", "sameAs": ["https://instagram.com/osoprodanovaera"]},
   "position": 1,
   "workExample": [
     {
@@ -129,8 +129,15 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .vol{text-align:center;font-family:var(--util);font-size:.82rem;color:var(--suave)}
 .vol .capa-mini{aspect-ratio:2/3;border-radius:3px;margin-bottom:.6rem;display:grid;place-items:center;
   border:1px dashed rgba(91,111,142,.45);color:var(--suave);font-family:var(--display);font-style:italic;font-size:1.5rem}
+.vol .capa-mini .n{font-size:.95rem;color:var(--suave)}
+.vol .capa-mini .t{font-family:var(--display);font-style:normal;font-weight:600;font-size:.95rem;line-height:1.2;color:#333;text-wrap:balance;padding-inline:.4rem}
+.vol .capa-mini{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center}
 .vol.ativo .capa-mini{border:0;background:url(capa.jpg) center/cover;box-shadow:0 10px 22px rgba(27,59,104,.22)}
 .vol strong{display:block;color:var(--tinta);font-weight:500}
+.insta{font-family:var(--util);font-size:.9rem;color:var(--suave);text-align:center;margin:2rem 0 0}
+.insta a,footer a{color:var(--mar);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(11,79,156,.35)}
+.insta a:hover,footer a:hover{border-bottom-color:var(--mar)}
+footer a{display:inline-block;margin-bottom:.5rem}
 footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--suave);padding-block:3rem 3.5rem}
 @media (max-width:620px){
   .livro{grid-template-columns:minmax(0,1fr)}
@@ -143,6 +150,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   body{font-size:1.0625rem}
   .carta{padding:1.4rem 1.2rem}
 }
+@media (max-width:620px){.vol .capa-mini .t{font-size:.66rem;padding-inline:.2rem}.vol .capa-mini .n{font-size:.75rem}}
 @media (max-width:360px){
   .serie{letter-spacing:.2em;font-size:.7rem;gap:.6rem}
   .serie::before,.serie::after{width:1.5rem}
@@ -232,15 +240,16 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   <h2>A coleção</h2>
   <ol class="colecao">
     <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1<br>impresso e <span style="white-space:nowrap">e-book</span></div></li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Pela Eternidade em Flor</strong>Volume 2<br>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Somente Amor</strong>Volume 3<br>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Fraternidade e Esperança</strong>Volume 4<br>em breve</li>
-    <li class="vol"><div class="capa-mini" aria-hidden="true">5</div><strong>Vidas em Movimento</strong>Volume 5<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true"><span class="n">2</span><span class="t">Pela Eternidade em Flor</span></div><strong>Pela Eternidade em Flor</strong>Volume 2<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true"><span class="n">3</span><span class="t">Somente Amor</span></div><strong>Somente Amor</strong>Volume 3<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true"><span class="n">4</span><span class="t">Fraternidade e Esperança</span></div><strong>Fraternidade e Esperança</strong>Volume 4<br>em breve</li>
+    <li class="vol"><div class="capa-mini" aria-hidden="true"><span class="n">5</span><span class="t">Vidas em Movimento</span></div><strong>Vidas em Movimento</strong>Volume 5<br>em breve</li>
   </ol>
+  <p class="insta">Acompanhe os lançamentos no Instagram: <a href="https://instagram.com/osoprodanovaera" target="_blank" rel="noopener">@osoprodanovaera</a></p>
 </section>
 </main>
 
-<footer>© 2025 Maria de Lourdes Irineu de Souza · <span style="white-space:nowrap">João Pessoa, PB</span></footer>
+<footer><a href="https://instagram.com/osoprodanovaera" target="_blank" rel="noopener">Instagram @osoprodanovaera</a><br>© 2025 Maria de Lourdes Irineu de Souza · <span style="white-space:nowrap">João Pessoa, PB</span></footer>
 
 </body>
 </html>
