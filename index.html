@@ -94,7 +94,7 @@ h1{font-family:var(--display);font-weight:600;color:var(--mar);font-size:clamp(2
 .comprar .botoes{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
 .comprar .cta{margin-top:0;min-width:12rem;justify-content:center}
 .cta.clube{background:#a6388c;box-shadow:0 10px 24px rgba(166,56,140,.28)}
-.cta.estante{background:#0b6e72;box-shadow:0 10px 24px rgba(11,110,114,.28)}
+.cta.estante{background:#007b7c;box-shadow:0 10px 24px rgba(0,123,124,.28)}
 .cta.clube:hover,.cta.estante:hover{filter:brightness(.93)}
 .cta.sec{background:transparent;color:var(--mar);box-shadow:inset 0 0 0 1.5px var(--mar)}
 .cta.sec:hover{background:rgba(11,79,156,.07);box-shadow:inset 0 0 0 1.5px var(--mar)}
@@ -110,6 +110,13 @@ h2{font-family:var(--display);font-weight:500;font-style:italic;color:var(--mar)
 .carta .centro{text-align:center}
 .assina{text-align:right;font-style:italic;font-weight:600;color:var(--mar)}
 .assina.meio{padding-right:22%}
+.fecho{display:flex;align-items:center;justify-content:flex-end;gap:1.2rem;margin-top:1.8rem}
+.fecho > div{min-width:0;text-align:right}
+.fecho p{margin:0}
+.fecho .data{margin-bottom:.2em}
+.autora{width:7.5rem;height:7.5rem;border-radius:50%;object-fit:cover;flex-shrink:0;
+  box-shadow:0 0 0 4px rgba(255,255,255,.85),0 10px 24px rgba(27,59,104,.2)}
+@media (max-width:480px){.fecho{flex-direction:column;align-items:flex-end;gap:.9rem}.autora{width:6.5rem;height:6.5rem}}
 .sep{width:3rem;height:1px;background:var(--coral);margin:2.2rem auto;border:0}
 b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .citacao{font-style:italic}
@@ -185,8 +192,13 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     <p>E agradeço, especialmente, o incentivo e o apoio que tenho recebido para seguir nesta jornada.</p>
     <p class="citacao">“No caminho do amor a esperança é estrela-guia”, como diz Amâncio, e “uma obra de amor deve fluir com a certeza de que é o amor que flui por onde passar.”</p>
     <p>Que Jesus nos ilumine e possamos continuar a tarefa de amor e luz.</p>
-    <p style="margin-bottom:.2em"><em>João Pessoa, 6 de novembro de 2026.</em></p>
-    <p class="assina">Maria de Lourdes Irineu de Souza</p>
+    <div class="fecho">
+      <img class="autora" src="autora.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Maria de Lourdes Irineu de Souza, autora">
+      <div>
+        <p class="data"><em>João Pessoa, 6 de novembro de 2026.</em></p>
+        <p class="assina">Maria de Lourdes Irineu de Souza</p>
+      </div>
+    </div>
   </div>
 </section>
 
