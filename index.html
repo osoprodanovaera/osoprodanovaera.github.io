@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>O Sopro da Nova Era · Ao Remanso do Coração</title>
-<meta name="description" content="Ao Remanso do Coração, livro 1 da série psicografada O Sopro da Nova Era, de Maria de Lourdes Irineu de Souza, pelo espírito Amâncio. E-book disponível na Amazon.">
+<meta name="description" content="Ao Remanso do Coração, livro 1 da série psicografada O Sopro da Nova Era, de Maria de Lourdes Irineu de Souza, pelo espírito Amâncio. Livro impresso no Clube de Autores e na Estante Virtual, e e-book na Amazon.">
 <!-- Prévia do link no WhatsApp e redes -->
 <meta property="og:type" content="book">
 <meta property="og:title" content="Ao Remanso do Coração · O Sopro da Nova Era">
-<meta property="og:description" content="Livro 1 da série psicografada, pelo espírito Amâncio. E-book disponível na Amazon.">
+<meta property="og:description" content="Livro 1 da série psicografada, pelo espírito Amâncio. Livro impresso e e-book já disponíveis.">
 <meta property="og:image" content="https://osoprodanovaera.com.br/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -32,12 +32,21 @@
   "url": "https://osoprodanovaera.com.br/",
   "isPartOf": {"@type": "BookSeries", "name": "O Sopro da Nova Era"},
   "position": 1,
-  "workExample": {
-    "@type": "Book",
-    "bookFormat": "https://schema.org/EBook",
-    "isbn": "9786501738314",
-    "potentialAction": {"@type": "ReadAction", "target": "https://www.amazon.com.br/dp/B0FY4L74NP"}
-  }
+  "workExample": [
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Paperback",
+      "isbn": "9786502439708",
+      "numberOfPages": 233,
+      "url": "https://clubedeautores.com.br/livro/ao-remanso-do-coracao"
+    },
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/EBook",
+      "isbn": "9786501738314",
+      "url": "https://www.amazon.com.br/dp/B0FY4L74NP"
+    }
+  ]
 }
 </script>
 
@@ -79,6 +88,16 @@ h1{font-family:var(--display);font-weight:600;color:var(--mar);font-size:clamp(2
   box-shadow:0 10px 24px rgba(11,79,156,.25);transition:transform .15s,box-shadow .15s}
 .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(11,79,156,.3)}
 .cta:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.comprar{display:grid;gap:1.1rem;margin-top:2rem;justify-items:center}
+.comprar .grupo{display:grid;gap:.55rem;justify-items:center}
+.comprar .rotulo-g{font-family:var(--util);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+.comprar .botoes{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.comprar .cta{margin-top:0;min-width:12rem;justify-content:center}
+.cta.sec{background:transparent;color:var(--mar);box-shadow:inset 0 0 0 1.5px var(--mar)}
+.cta.sec:hover{background:rgba(11,79,156,.07);box-shadow:inset 0 0 0 1.5px var(--mar)}
+.livro .comprar{justify-items:start}
+.livro .comprar .grupo{justify-items:start}
+.livro .comprar .botoes{justify-content:flex-start}
 .nota-cta{display:block;margin-top:.7rem;font-family:var(--util);font-size:.82rem;color:var(--suave)}
 section{padding-block:3rem}
 h2{font-family:var(--display);font-weight:500;font-style:italic;color:var(--mar);font-size:clamp(1.7rem,4.5vw,2.2rem);margin:0 0 1.5rem;text-wrap:balance}
@@ -131,8 +150,15 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   <p class="rotulo">Livro 1 da série</p>
   <h1>Ao Remanso do Coração</h1>
   <p class="autoria">Maria de Lourdes Irineu de Souza · pelo espírito <em>Amâncio</em></p>
-  <a class="cta" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Comprar o e-book na Amazon</a>
-  <span class="nota-cta">Leia no Kindle, no celular, no tablet ou no computador</span>
+  <div class="comprar">
+    <div class="grupo"><span class="rotulo-g">Livro impresso</span>
+      <div class="botoes">
+        <a class="cta" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
+        <a class="cta" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
+      </div></div>
+    <div class="grupo"><span class="rotulo-g">E-book</span>
+      <div class="botoes"><a class="cta sec" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Amazon (Kindle)</a></div></div>
+  </div>
 </div>
 
 <section class="wrap" id="carta">
@@ -149,13 +175,13 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     <hr class="sep">
     <p>Com essas palavras o espírito Amâncio apresenta <b class="t">O SOPRO DA NOVA ERA</b>, uma série psicografada de cinco livros, em que nos leva a refletir sobre as perspectivas individuais e coletivas do novo tempo, pautado nas transformações morais e evolutivas, no amor, na fé, na compreensão e na caridade, valores que orientam o caminho da fraternidade com Jesus.</p>
     <p><b class="t">AO REMANSO DO CORAÇÃO</b>, o primeiro livro da série, vem falar de amor e esperança. Convidar à renovação. Recordar o Mestre, suas palavras, ensinamentos, o seu impacto na transformação interior de cada ser, nos apontar novos caminhos, novo tempo.</p>
-    <p>Finalmente já está disponível em formato e-book.</p>
+    <p>Finalmente já está disponível em formato e-book e como livro físico.</p>
     <p>Os outros quatro volumes serão publicados a seguir.</p>
     <p>Serei grata se puderem ajudar a divulgar. Todo recurso obtido será destinado a Núcleos e atividades de estudo, evangelização, assistência e divulgação da doutrina espírita.</p>
     <p>E agradeço, especialmente, o incentivo e o apoio que tenho recebido para seguir nesta jornada.</p>
     <p class="citacao">“No caminho do amor a esperança é estrela-guia”, como diz Amâncio, e “uma obra de amor deve fluir com a certeza de que é o amor que flui por onde passar.”</p>
     <p>Que Jesus nos ilumine e possamos continuar a tarefa de amor e luz.</p>
-    <p style="margin-bottom:.2em"><em>João Pessoa,</em></p>
+    <p style="margin-bottom:.2em"><em>João Pessoa, 6 de novembro de 2026.</em></p>
     <p class="assina">Maria de Lourdes Irineu de Souza</p>
   </div>
 </section>
@@ -169,9 +195,18 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
       <p><i>Ao Remanso do Coração</i> vem falar de amor e esperança, convidar à renovação e a seguir com fé e confiança no coração, nesse caminho de luz para um novo tempo, uma Nova Era de amor e fraternidade.</p>
       <div class="ficha">
         <span>Psicografia · Literatura espírita</span>
+        <span>Livro impresso · 16 × 23 cm · 233 páginas · ISBN 978-65-02-43970-8</span>
         <span>E-book Kindle · ISBN 978-65-01-73831-4</span>
       </div>
-      <a class="cta" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Ver na Amazon</a>
+      <div class="comprar">
+    <div class="grupo"><span class="rotulo-g">Livro impresso</span>
+      <div class="botoes">
+        <a class="cta" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
+        <a class="cta" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
+      </div></div>
+    <div class="grupo"><span class="rotulo-g">E-book</span>
+      <div class="botoes"><a class="cta sec" href="https://www.amazon.com.br/dp/B0FY4L74NP" target="_blank" rel="noopener">Amazon (Kindle)</a></div></div>
+  </div>
     </div>
   </div>
 </section>
@@ -179,7 +214,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 <section class="wrap" id="colecao">
   <h2>A coleção</h2>
   <ol class="colecao">
-    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1 · disponível</div></li>
+    <li class="vol ativo"><div class="capa-mini" aria-hidden="true"></div><div><strong>Ao Remanso do Coração</strong>Volume 1 · impresso e e-book</div></li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">2</div><strong>Volume 2</strong>em breve</li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">3</div><strong>Volume 3</strong>em breve</li>
     <li class="vol"><div class="capa-mini" aria-hidden="true">4</div><strong>Volume 4</strong>em breve</li>
