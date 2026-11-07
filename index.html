@@ -142,8 +142,7 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .insta a:hover{border-bottom-color:var(--mar)}
 .seta{position:fixed;left:50%;bottom:calc(1.2rem + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);
   width:2.9rem;height:2.9rem;border-radius:50%;display:grid;place-items:center;
-  background:rgba(255,255,255,.72);color:var(--mar);box-shadow:0 6px 18px rgba(27,59,104,.18);
-  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  background:rgba(255,255,255,.1);color:var(--mar);border:1.5px solid rgba(11,79,156,.35);
   transition:opacity .35s,visibility .35s;z-index:10;text-decoration:none}
 .seta svg{width:1.3rem;height:1.3rem;animation:quica 2.2s ease-in-out infinite}
 .seta.some{opacity:0;visibility:hidden}
@@ -259,30 +258,29 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
 
 <footer>© 2026 Maria de Lourdes Irineu de Souza · <span style="white-space:nowrap">João Pessoa, PB</span></footer>
 
-<a class="seta" href="#carta" aria-label="Rolar para ler a carta">
+<a class="seta" href="#carta" aria-label="Rolar para continuar lendo">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
 </a>
 <script>
 (function(){
   var seta=document.querySelector('.seta');
-  if(!seta) return;
-  var espera=null;
+  var colecao=document.getElementById('colecao');
+  if(!seta || !colecao) return;
+  var espera=null, terminou=false;
+  function chegouNaColecao(){ return colecao.getBoundingClientRect().top < window.innerHeight * 0.85; }
   function atualiza(){
-    seta.classList.toggle('some', window.scrollY > 120);
     clearTimeout(espera);
-    // Se a pessoa parar ainda no começo da página, a seta volta depois de 6 segundos
-    if (window.scrollY > 120 && window.scrollY < window.innerHeight * 0.9) {
-      espera=setTimeout(function(){ seta.classList.remove('some'); }, 6000);
-    }
+    if (terminou || chegouNaColecao()) { terminou=true; seta.classList.add('some'); return; }
+    // some enquanto a pessoa rola; volta se ela ficar 6 segundos parada
+    if (window.scrollY > 40) seta.classList.add('some');
+    espera=setTimeout(function(){ if(!terminou) seta.classList.remove('some'); }, 6000);
   }
   window.addEventListener('scroll', atualiza, {passive:true});
-  atualiza();
+  if (chegouNaColecao()) { terminou=true; seta.classList.add('some'); }
   seta.addEventListener('click', function(e){
-    var alvo=document.getElementById('carta');
-    if(!alvo) return;
     e.preventDefault();
     var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    alvo.scrollIntoView({behavior: reduz ? 'auto' : 'smooth', block:'start'});
+    window.scrollBy({top: window.innerHeight * 0.8, behavior: reduz ? 'auto' : 'smooth'});
   });
 })();
 </script>
