@@ -140,7 +140,7 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .insta{font-family:var(--util);font-size:.9rem;color:var(--suave);text-align:center;margin:2rem 0 0}
 .insta a{color:var(--mar);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(11,79,156,.35)}
 .insta a:hover{border-bottom-color:var(--mar)}
-.seta{position:fixed;left:50%;bottom:calc(1.2rem + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);
+.seta{position:fixed;right:calc(1rem + env(safe-area-inset-right, 0px));bottom:calc(1.2rem + env(safe-area-inset-bottom, 0px));
   width:2.9rem;height:2.9rem;border-radius:50%;display:grid;place-items:center;
   background:rgba(255,255,255,.1);color:var(--mar);border:1.5px solid rgba(11,79,156,.35);
   transition:opacity .35s,visibility .35s;z-index:10;text-decoration:none}
@@ -149,6 +149,7 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .seta:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
 @keyframes quica{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
 @media (prefers-reduced-motion:reduce){.seta svg{animation:none}}
+@media (min-width:621px){.seta{display:none}}
 footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--suave);padding-block:3rem 3.5rem}
 @media (max-width:620px){
   .autoria .ponto{display:none}
