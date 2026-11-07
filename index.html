@@ -95,12 +95,13 @@ h1{font-family:var(--display);font-weight:600;color:var(--mar);font-size:clamp(2
 .comprar .cta{margin-top:0;min-width:12rem;justify-content:center}
 .cta.clube{background:#a6388c;box-shadow:0 10px 24px rgba(166,56,140,.28)}
 .cta.estante{background:#007b7c;box-shadow:0 10px 24px rgba(0,123,124,.28)}
-.cta.clube:hover,.cta.estante:hover{filter:brightness(.93)}
+.cta.amazon{background:#232f3e;box-shadow:0 10px 24px rgba(35,47,62,.28)}
+.cta.clube:hover,.cta.estante:hover,.cta.amazon:hover{filter:brightness(.93)}
 .cta.sec{background:transparent;color:var(--mar);box-shadow:inset 0 0 0 1.5px var(--mar)}
 .cta.sec:hover{background:rgba(11,79,156,.07);box-shadow:inset 0 0 0 1.5px var(--mar)}
 .livro .comprar{justify-items:start}
 .livro .comprar .grupo{justify-items:start}
-.livro .comprar .botoes{justify-content:flex-start}
+.livro .comprar .botoes{flex-direction:column;align-items:flex-start}
 .nota-cta{display:block;margin-top:.7rem;font-family:var(--util);font-size:.82rem;color:var(--suave)}
 section{padding-block:3rem}
 #carta{padding-block:1.25rem 1rem}
@@ -158,7 +159,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   .livro img{max-width:12rem;margin:0 auto;display:block}
   .ficha{justify-items:center;text-align:center}
   .livro .comprar,.livro .comprar .grupo{justify-items:center}
-  .livro .comprar .botoes{justify-content:center}
+  .livro .comprar .botoes{align-items:center}
   .colecao{grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
   .vol.ativo{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.9rem;margin-bottom:.6rem}
   .vol.ativo .capa-mini{width:7.5rem;margin-bottom:.6rem}
@@ -235,6 +236,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     <div class="grupo"><span class="rotulo-g">Livro impresso</span>
       <div class="botoes">
         <a class="cta clube" data-goatcounter-click="clique-clube-de-autores" data-goatcounter-title="Botão Clube de Autores" href="https://clubedeautores.com.br/livro/ao-remanso-do-coracao" target="_blank" rel="noopener">Clube de Autores</a>
+        <a class="cta amazon" data-goatcounter-click="clique-amazon-impresso" data-goatcounter-title="Botão Amazon (impresso)" href="https://a.co/d/08cABNUT" target="_blank" rel="noopener">Amazon</a>
         <a class="cta estante" data-goatcounter-click="clique-estante-virtual" data-goatcounter-title="Botão Estante Virtual" href="https://www.estantevirtual.com.br/livro/ao-remanso-do-coracao-TJ5-5781-000" target="_blank" rel="noopener">Estante Virtual</a>
       </div></div>
     <div class="grupo"><span class="rotulo-g">E-book</span>
