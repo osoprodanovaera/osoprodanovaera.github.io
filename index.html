@@ -139,22 +139,28 @@ b.t{font-weight:600;color:var(--mar);letter-spacing:.02em}
 .vol .capa-mini{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center}
 .vol.ativo .capa-mini{border:0;background:url(capa.jpg) center/cover;box-shadow:0 10px 22px rgba(27,59,104,.22)}
 .vol strong{display:block;color:var(--tinta);font-weight:500}
-#mensagem{padding-block:1.5rem 1rem}
-.form-intro{margin:0 0 1.4rem;color:var(--suave);text-wrap:pretty}
-.form{background:var(--papel);border-radius:4px;padding:clamp(1.3rem,4vw,2.2rem);display:grid;gap:1.1rem}
-.campo{display:grid;gap:.4rem;min-width:0}
-.campo label{font-family:var(--util);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
-.campo input,.campo textarea{font:inherit;font-size:1rem;color:var(--tinta);background:rgba(255,255,255,.75);
-  border:1px solid rgba(91,111,142,.35);border-radius:6px;padding:.75rem .9rem;width:100%;box-sizing:border-box}
-.campo textarea{min-height:9rem;resize:vertical;line-height:1.6}
-.campo input:focus,.campo textarea:focus{outline:2px solid var(--mar);outline-offset:1px;border-color:transparent;background:#fff}
-.linha2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}
+.contato{text-align:center;margin:1.1rem 0 0}
+.contato .cta{margin-top:0;font-size:.92rem;padding:.7rem 1.4rem;border:0;cursor:pointer;font-family:var(--util);font-weight:500}
+.janela{border:0;padding:0;border-radius:12px;width:min(30rem,calc(100% - 32px));max-height:calc(100% - 32px);
+  background:#fbf3ee;color:var(--tinta);box-shadow:0 24px 60px rgba(27,59,104,.3)}
+.janela::backdrop{background:rgba(27,40,64,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.janela .topo{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 1.3rem .2rem}
+.janela h2{margin:0;font-size:1.45rem}
+.fechar{background:none;border:0;font-size:1.6rem;line-height:1;color:var(--suave);cursor:pointer;padding:.2rem .4rem;border-radius:6px}
+.fechar:focus-visible{outline:2px solid var(--mar)}
+.form{display:grid;gap:.7rem;padding:.8rem 1.3rem 1.3rem}
+.form input,.form textarea{font:inherit;font-size:1rem;color:var(--tinta);background:#fff;
+  border:1px solid rgba(91,111,142,.3);border-radius:8px;padding:.7rem .85rem;width:100%;box-sizing:border-box}
+.form textarea{min-height:7.5rem;resize:vertical;line-height:1.55}
+.form input:focus,.form textarea:focus{outline:2px solid var(--mar);outline-offset:0;border-color:transparent}
+.form ::placeholder{color:#8a93a6}
 .armadilha{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.form .cta{margin-top:.3rem;justify-self:start;border:0;cursor:pointer;font:inherit;font-family:var(--util);font-weight:500}
+.form .cta{margin-top:.2rem;border:0;cursor:pointer;font:inherit;font-family:var(--util);font-weight:500;justify-content:center}
 .form .cta[disabled]{opacity:.6;cursor:wait}
-.status{margin:0;font-family:var(--util);font-size:.92rem}
+.status{margin:0;font-family:var(--util);font-size:.9rem;text-align:center}
+.status:empty{display:none}
 .status.ok{color:#2f6b3a}.status.erro{color:#a33a2a}
-@media (max-width:620px){.linha2{grid-template-columns:minmax(0,1fr)}.form .cta{justify-self:stretch;justify-content:center}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .insta{font-family:var(--util);font-size:.9rem;color:var(--suave);text-align:center;margin:2rem 0 0}
 .insta a{color:var(--mar);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(11,79,156,.35)}
 .insta a:hover{border-bottom-color:var(--mar)}
@@ -263,24 +269,6 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   </div>
 </section>
 
-<section class="wrap" id="mensagem">
-  <h2>Escreva para a autora</h2>
-  <p class="form-intro">Gostou do livro ou quer compartilhar uma reflexão? Deixe sua mensagem para Maria de Lourdes.</p>
-  <form class="form" id="form-mensagem" novalidate>
-    <input type="hidden" name="access_key" value="74de9247-5cfe-44de-9d93-8854d5171fff">
-    <input type="hidden" name="subject" value="Nova mensagem pelo site O Sopro da Nova Era">
-    <input type="hidden" name="from_name" value="Site O Sopro da Nova Era">
-    <div class="armadilha" aria-hidden="true"><label for="botcheck">Não preencha</label><input type="checkbox" name="botcheck" id="botcheck" tabindex="-1"></div>
-    <div class="linha2">
-      <div class="campo"><label for="m-nome">Nome</label><input id="m-nome" name="name" type="text" autocomplete="name" required maxlength="120"></div>
-      <div class="campo"><label for="m-email">E-mail</label><input id="m-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
-    </div>
-    <div class="campo"><label for="m-texto">Mensagem</label><textarea id="m-texto" name="message" required maxlength="5000"></textarea></div>
-    <button class="cta" type="submit">Enviar mensagem</button>
-    <p class="status" id="m-status" role="status" aria-live="polite"></p>
-  </form>
-</section>
-
 <section class="wrap" id="colecao">
   <h2>A coleção</h2>
   <ol class="colecao">
@@ -291,6 +279,21 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     <li class="vol"><div class="capa-mini" aria-hidden="true"><span class="n">5</span><span class="t">Vidas em Movimento</span></div><span class="leg">em breve...</span></li>
   </ol>
   <p class="insta">Acompanhe os lançamentos no Instagram: <a data-goatcounter-click="clique-instagram" data-goatcounter-title="Link do Instagram" href="https://instagram.com/osoprodanovaera" target="_blank" rel="noopener">@osoprodanovaera</a></p>
+  <p class="contato"><button class="cta sec" type="button" id="abrir-mensagem" data-goatcounter-click="abrir-formulario" data-goatcounter-title="Abriu o formulário de mensagem">Escreva para a autora</button></p>
+  <dialog class="janela" id="janela-mensagem" aria-labelledby="titulo-mensagem">
+    <div class="topo"><h2 id="titulo-mensagem">Escreva para a autora</h2><button class="fechar" type="button" id="fechar-mensagem" aria-label="Fechar">&times;</button></div>
+    <form class="form" id="form-mensagem" novalidate>
+      <input type="hidden" name="access_key" value="74de9247-5cfe-44de-9d93-8854d5171fff">
+      <input type="hidden" name="subject" value="Nova mensagem pelo site O Sopro da Nova Era">
+      <input type="hidden" name="from_name" value="Site O Sopro da Nova Era">
+      <div class="armadilha" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1"></div>
+      <label class="vh" for="m-nome">Nome</label><input id="m-nome" name="name" type="text" autocomplete="name" placeholder="Seu nome" required maxlength="120">
+      <label class="vh" for="m-email">E-mail</label><input id="m-email" name="email" type="email" autocomplete="email" placeholder="Seu e-mail" required maxlength="160">
+      <label class="vh" for="m-texto">Mensagem</label><textarea id="m-texto" name="message" placeholder="Sua mensagem para Maria de Lourdes" required maxlength="5000"></textarea>
+      <button class="cta" type="submit">Enviar mensagem</button>
+      <p class="status" id="m-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
 </section>
 </main>
 
@@ -327,6 +330,10 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
   var form=document.getElementById('form-mensagem');
   if(!form) return;
   var status=document.getElementById('m-status'), botao=form.querySelector('button[type=submit]');
+  var janela=document.getElementById('janela-mensagem');
+  document.getElementById('abrir-mensagem').addEventListener('click', function(){ aviso(''); janela.showModal(); });
+  document.getElementById('fechar-mensagem').addEventListener('click', function(){ janela.close(); });
+  janela.addEventListener('click', function(e){ if(e.target===janela) janela.close(); });
   function aviso(t,tipo){ status.textContent=t; status.className='status '+(tipo||''); }
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -340,7 +347,7 @@ footer{text-align:center;font-family:var(--util);font-size:.8rem;color:var(--sua
     .then(function(r){ return r.json(); })
     .then(function(d){
       if(d.success){
-        form.reset(); aviso('Mensagem enviada! Obrigada pelo carinho.','ok');
+        form.reset(); aviso('Mensagem enviada! Obrigada pelo carinho.','ok'); setTimeout(function(){ if(janela.open) janela.close(); }, 3500);
         if(window.goatcounter && window.goatcounter.count) window.goatcounter.count({path:'mensagem-enviada', title:'Mensagem enviada pelo formulário', event:true});
       } else { aviso('Não foi possível enviar agora. Tente de novo em alguns minutos.','erro'); }
     })
